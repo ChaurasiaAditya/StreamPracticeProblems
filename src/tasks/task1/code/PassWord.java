@@ -7,4 +7,5 @@
 package tasks.task1.code;
 
 public class PassWord {
+    private String passWord;
 }
