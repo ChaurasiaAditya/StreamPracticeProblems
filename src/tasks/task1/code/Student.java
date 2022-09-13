@@ -57,4 +57,14 @@ public class Student {
     public int hashCode() {
         return Objects.hash(rollNumber, firstName, lastName, currentYear);
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollNumber=" + rollNumber +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", currentYear=" + currentYear +
+                '}';
+    }
 }
