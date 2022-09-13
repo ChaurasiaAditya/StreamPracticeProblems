@@ -8,42 +8,8 @@ package tasks.task1.code;
 
 import java.util.Objects;
 
-public class Student {
-    private byte rollNumber;
-    private final String firstName;
-    private final String lastName;
-    private byte currentYear;
+public record Student(byte rollNumber, String firstName, String lastName, byte currentYear) {
 
-    public Student(byte rollNumber, String firstName, String lastName, byte currentYear) {
-        this.rollNumber = rollNumber;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.currentYear = currentYear;
-    }
-
-    public byte getRollNumber() {
-        return rollNumber;
-    }
-
-    public void setRollNumber(byte rollNumber) {
-        this.rollNumber = rollNumber;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public byte getCurrentYear() {
-        return currentYear;
-    }
-
-    public void setCurrentYear(byte currentYear) {
-        this.currentYear = currentYear;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -54,17 +20,7 @@ public class Student {
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(rollNumber, firstName, lastName, currentYear);
-    }
-
-    @Override
     public String toString() {
-        return "Student{" +
-                "rollNumber=" + getRollNumber() +
-                ", firstName='" + getFirstName() + '\'' +
-                ", lastName='" + getLastName() + '\'' +
-                ", currentYear=" + getCurrentYear() +
-                '}';
+        return "Student{" + "rollNumber=" + rollNumber() + ", firstName='" + firstName() + '\'' + ", lastName='" + lastName() + '\'' + ", currentYear=" + currentYear() + '}';
     }
 }
