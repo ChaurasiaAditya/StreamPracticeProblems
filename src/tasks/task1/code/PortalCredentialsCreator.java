@@ -14,4 +14,9 @@ public class PortalCredentialsCreator {
         return null;
     }
 
+    public List<PassWord> createListOfRandomPasswords(List<Student> studentsList) {
+        return null;
+    }
+
+
 }
