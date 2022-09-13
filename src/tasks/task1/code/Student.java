@@ -61,10 +61,10 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "rollNumber=" + rollNumber +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", currentYear=" + currentYear +
+                "rollNumber=" + getRollNumber() +
+                ", firstName='" + getFirstName() + '\'' +
+                ", lastName='" + getLastName() + '\'' +
+                ", currentYear=" + getCurrentYear() +
                 '}';
     }
 }
