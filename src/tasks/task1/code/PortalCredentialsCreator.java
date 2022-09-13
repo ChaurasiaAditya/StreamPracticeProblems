@@ -6,23 +6,24 @@
  */
 package tasks.task1.code;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PortalCredentialsCreator {
 
     public List<UserName> createListOfUserNames(List<Student> studentsList) {
 
-
-        return null;
+        return studentsList
+                .stream()
+                .map(this::createUserName)
+                .collect(Collectors.toList());
     }
 
-    public UserName createUserName(Student student){
-        String firstName = student.getFirstName();
-        String lastName = student.getLastName();
-        byte currentYear = student.getCurrentYear();
-        byte rollNumber = student.getRollNumber();
-
+    private UserName createUserName(Student student){
+        String firstName = student.firstName();
+        String lastName = student.lastName();
+        byte currentYear = student.currentYear();
+        byte rollNumber = student.rollNumber();
         String format = String.format("%s.%s.%d.%d", firstName, lastName, currentYear, rollNumber);
         return new UserName(format);
     }
