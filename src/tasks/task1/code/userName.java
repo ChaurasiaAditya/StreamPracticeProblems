@@ -7,4 +7,6 @@
 package tasks.task1.code;
 
 public class userName {
+    private String userName;
 }
+
