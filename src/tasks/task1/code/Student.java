@@ -8,7 +8,14 @@ package tasks.task1.code;
 
 public class Student {
     private byte rollNumber;
-    private String firstName;
-    private String lastName;
+    private final String firstName;
+    private final String lastName;
     private byte currentYear;
+
+    public Student(byte rollNumber, String firstName, String lastName, byte currentYear) {
+        this.rollNumber = rollNumber;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.currentYear = currentYear;
+    }
 }
