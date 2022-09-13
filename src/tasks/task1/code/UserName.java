@@ -6,7 +6,7 @@
  */
 package tasks.task1.code;
 
-public class userName {
+public class UserName {
     private String userName;
 }
 
