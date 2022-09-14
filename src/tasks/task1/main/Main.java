@@ -26,5 +26,8 @@ public class Main {
 
         // Create PortalCredentialCreator Object
         PortalCredentialsCreator portalCredentialsCreator = new PortalCredentialsCreator();
+
+        // Call the Method and Print the UserName
+        System.out.println(portalCredentialsCreator.createListOfUserNames(studentList));
     }
 }
