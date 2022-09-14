@@ -9,7 +9,7 @@ package tasks.task1.code;
 import java.util.Objects;
 
 public class PassWord {
-    private String passWord;
+    private final String passWord;
 
     public PassWord(String passWord) {
         this.passWord = passWord;
@@ -30,8 +30,7 @@ public class PassWord {
 
     @Override
     public String toString() {
-        return "PassWord{" +
-                "passWord='" + passWord + '\'' +
-                '}';
+        return " PassWord = " + passWord +
+                "\n";
     }
 }
