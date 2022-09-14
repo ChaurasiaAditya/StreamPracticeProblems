@@ -5,8 +5,6 @@
  * Profile: github.com/ChaurasiaAditya
  */
 package tasks.task1.code;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -31,12 +29,10 @@ public class PortalCredentialsCreator {
     }
 
     public List<PassWord> createListOfRandomPasswords(List<Student> studentsList) {
-        List<PassWord> passWordList = new ArrayList<>();
-        for (Student student : studentsList) {
-            PassWord passWord = new PassWord(createStringPassword(student));
-            passWordList.add(passWord);
-        }
-        return passWordList;
+        return studentsList
+                .stream()
+                .map(student -> new PassWord(createStringPassword(student)))
+                .collect(Collectors.toList());
     }
 
     private String createStringPassword(Student student){
