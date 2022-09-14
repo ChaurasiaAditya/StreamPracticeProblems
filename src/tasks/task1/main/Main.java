@@ -20,5 +20,8 @@ public class Main {
         Student student1 = new Student((byte) 1, "Aditya", "Chaurasia", (byte) 22);
         Student student2 = new Student((byte) 2, "Divyansh", "Bharadwaj", (byte) 22);
         Student student3 = new Student((byte) 3, "Pinky", "Sodhi", (byte) 22);
+
+        // Add the Student objects in an Array List.
+        List<Student> studentList = new ArrayList<>(Arrays.asList(student1, student2, student3));
     }
 }
