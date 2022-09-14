@@ -7,6 +7,7 @@
 package tasks.task1.code;
 
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 public class PortalCredentialsCreator {
@@ -24,13 +25,24 @@ public class PortalCredentialsCreator {
         String lastName = student.lastName();
         byte currentYear = student.currentYear();
         byte rollNumber = student.rollNumber();
-        String format = String.format("%s.%s.%d.%d", firstName, lastName, currentYear, rollNumber);
-        return new UserName(format);
+        String username = String.format("%s.%s.%d.%d", firstName, lastName, currentYear, rollNumber);
+        return new UserName(username);
     }
 
     public List<PassWord> createListOfRandomPasswords(List<Student> studentsList) {
         return null;
     }
 
+    public String createStringPassword(Student student){
+        int leftLimit = 97; // letter 'a'
+        int rightLimit = 122; // letter 'z'
+        int targetStringLength = 8;
+        Random random = new Random();
+        return random.ints(leftLimit, rightLimit + 1)
+                .limit(targetStringLength)
+                .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+                .toString()
+                .concat(student.firstName());
+    }
 
 }
