@@ -8,15 +8,14 @@ package tasks.task2.code;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class TestResultGenerator {
     public HashSet<String> getDetailsOfFailedStudents(Set<Student> studentSet) {
-        HashSet<String> detailsOfFailedStudent = new HashSet<>();
-        for (Student students : studentSet){
-            if (students.getMarks() < 30){
-                detailsOfFailedStudent.add(students.getStudentName() + "=" + students.getParentsContactNumber());
-            }
-        }
-        return null;
+        return studentSet
+                .stream()
+                .filter(students -> students.getMarks() < 30)
+                .map(students -> "\"" + students.getStudentName() + "=" + students.getParentsContactNumber() + "\"")
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }
