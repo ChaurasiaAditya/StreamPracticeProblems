@@ -29,5 +29,8 @@ public class Main {
 
         // Call the Method and Print the UserName
         System.out.println(portalCredentialsCreator.createListOfUserNames(studentList));
+
+        // Call the method and Print the Passwords
+        System.out.println(portalCredentialsCreator.createListOfRandomPasswords(studentList));
     }
 }
