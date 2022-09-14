@@ -23,5 +23,8 @@ public class Main {
 
         // Add the Student objects in an Array List.
         List<Student> studentList = new ArrayList<>(Arrays.asList(student1, student2, student3));
+
+        // Create PortalCredentialCreator Object
+        PortalCredentialsCreator portalCredentialsCreator = new PortalCredentialsCreator();
     }
 }
