@@ -7,4 +7,8 @@
 package tasks.task2.code;
 
 public class Student {
+    private byte rollNumber;
+    private String studentName;
+    private long parentsContactNumber;
+    private double marks;
 }
