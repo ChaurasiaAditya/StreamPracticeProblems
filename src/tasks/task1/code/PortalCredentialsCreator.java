@@ -6,6 +6,7 @@
  */
 package tasks.task1.code;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -30,10 +31,15 @@ public class PortalCredentialsCreator {
     }
 
     public List<PassWord> createListOfRandomPasswords(List<Student> studentsList) {
-        return null;
+        List<PassWord> passWordList = new ArrayList<>();
+        for (Student student : studentsList) {
+            PassWord passWord = new PassWord(createStringPassword(student));
+            passWordList.add(passWord);
+        }
+        return passWordList;
     }
 
-    public String createStringPassword(Student student){
+    private String createStringPassword(Student student){
         int leftLimit = 97; // letter 'a'
         int rightLimit = 122; // letter 'z'
         int targetStringLength = 8;
