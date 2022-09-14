@@ -6,6 +6,8 @@
  */
 package tasks.task2.code;
 
+import java.util.Objects;
+
 public class Student {
     private byte rollNumber;
     private final String studentName;
@@ -42,5 +44,18 @@ public class Student {
 
     public void setMarks(double marks) {
         this.marks = marks;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return rollNumber == student.rollNumber && parentsContactNumber == student.parentsContactNumber && Double.compare(student.marks, marks) == 0 && Objects.equals(studentName, student.studentName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(rollNumber, studentName, parentsContactNumber, marks);
     }
 }
