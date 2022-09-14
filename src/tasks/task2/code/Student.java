@@ -58,4 +58,14 @@ public class Student {
     public int hashCode() {
         return Objects.hash(rollNumber, studentName, parentsContactNumber, marks);
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollNumber=" + rollNumber +
+                ", studentName='" + studentName + '\'' +
+                ", parentsContactNumber=" + parentsContactNumber +
+                ", marks=" + marks +
+                '}';
+    }
 }
