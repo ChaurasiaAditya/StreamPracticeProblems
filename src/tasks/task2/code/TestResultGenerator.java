@@ -6,8 +6,7 @@
  */
 package tasks.task2.code;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class TestResultGenerator {
@@ -20,7 +19,6 @@ public class TestResultGenerator {
     }
 
     public Set<Student> sortStudentsForRanking(HashSet<Student> studentSet) {
-        return null;
-
+        return new TreeSet<>(studentSet);
     }
 }
