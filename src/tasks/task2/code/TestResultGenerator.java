@@ -18,4 +18,9 @@ public class TestResultGenerator {
                 .map(students -> "\"" + students.getStudentName() + "=" + students.getParentsContactNumber() + "\"")
                 .collect(Collectors.toCollection(HashSet::new));
     }
+
+    public Set<Student> sortStudentsForRanking(HashSet<Student> studentSet) {
+        return null;
+
+    }
 }
