@@ -54,10 +54,6 @@ public class Employee {
         this.salary = salary;
     }
 
-    public void setNumberOfLeaves(byte numberOfLeaves) {
-        this.numberOfLeaves = numberOfLeaves;
-    }
-
     @Override
     public String toString() {
         return "Employee{" +
