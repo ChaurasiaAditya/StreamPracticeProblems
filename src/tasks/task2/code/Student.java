@@ -8,10 +8,10 @@ package tasks.task2.code;
 
 import java.util.Objects;
 
-public class Student {
-    private byte rollNumber;
+public class Student implements Comparable<Student> {
     private final String studentName;
     private final long parentsContactNumber;
+    private byte rollNumber;
     private double marks;
 
 
@@ -51,7 +51,10 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return rollNumber == student.rollNumber && parentsContactNumber == student.parentsContactNumber && Double.compare(student.marks, marks) == 0 && Objects.equals(studentName, student.studentName);
+        return rollNumber == student.rollNumber &&
+                parentsContactNumber == student.parentsContactNumber &&
+                Double.compare(student.marks, marks) == 0 &&
+                Objects.equals(studentName, student.studentName);
     }
 
     @Override
@@ -61,11 +64,15 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "rollNumber=" + rollNumber +
-                ", studentName='" + studentName + '\'' +
-                ", parentsContactNumber=" + parentsContactNumber +
-                ", marks=" + marks +
-                '}';
+        return " RollNumber = " + getRollNumber() +
+                ", StudentName = " + getStudentName() + '\'' +
+                ", ParentsContactNumber = " + getParentsContactNumber() +
+                ", Marks = " + getMarks() +
+                "\n";
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return Byte.compare((byte) o.getMarks(), (byte) this.getMarks());
     }
 }
