@@ -33,7 +33,7 @@ public class UserName {
 
     @Override
     public String toString() {
-        return "userName = " + userName + "\n";
+        return "userName = " + userName;
     }
 }
 
