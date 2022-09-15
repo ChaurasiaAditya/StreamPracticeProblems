@@ -6,6 +6,8 @@
  */
 package tasks.task3.code;
 
+import java.util.Objects;
+
 public class Employee {
     private final short id;
     private final String name;
@@ -19,4 +21,16 @@ public class Employee {
         this.numberOfLeaves = numberOfLeaves;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return id == employee.id && Double.compare(employee.salary, salary) == 0 && numberOfLeaves == employee.numberOfLeaves && Objects.equals(name, employee.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, salary, numberOfLeaves);
+    }
 }
