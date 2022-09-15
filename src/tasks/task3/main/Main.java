@@ -27,5 +27,9 @@ public class Main {
 
         // create object for employee leave calculator
         EmployeeLeaveCalculator employeeLeaveCalculator = new EmployeeLeaveCalculator();
+
+        // call the method and print the Ids
+        System.out.println("Employee Id of defaulter Employees");
+        System.out.println(employeeLeaveCalculator.getDefaulterEmployeeIDList(employees));
     }
 }
