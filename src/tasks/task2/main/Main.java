@@ -31,5 +31,9 @@ public class Main {
         // Call the method and print the Set of Failed students
         System.out.println("Failed Students with their Parents Contact Number");
         System.out.println(testResultGenerator.getDetailsOfFailedStudents(students));
+
+        // Call the method and Print the Set of Students by Ranking Order
+        System.out.println("\n" + "Students by Ranking");
+        System.out.println(testResultGenerator.sortStudentsForRanking(students));
     }
 }
