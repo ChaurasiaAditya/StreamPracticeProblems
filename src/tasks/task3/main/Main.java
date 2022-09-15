@@ -31,5 +31,9 @@ public class Main {
         // call the method and print the Ids
         System.out.println("Employee Id of defaulter Employees");
         System.out.println(employeeLeaveCalculator.getDefaulterEmployeeIDList(employees));
+
+        // call the method and print the Number of leaves
+        System.out.println("\n Employees with Number of leaves");
+        System.out.println(employeeLeaveCalculator.getNumberOfLeaves(employees));
     }
 }
