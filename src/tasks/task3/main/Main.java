@@ -15,5 +15,11 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
+        // create Employees objects
+        Employee employee1 = new Employee((short) 101, "Aditya", 100000.0, (byte) 12);
+        Employee employee2 = new Employee((short) 102, "Divyansh", 90000.0, (byte) 16);
+        Employee employee3 = new Employee((short) 103, "Neeraj", 80000.0, (byte) 27);
+        Employee employee4 = new Employee((short) 104, "Vaibhav", 70000.0, (byte) 32);
     }
 }
