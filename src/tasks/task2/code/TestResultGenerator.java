@@ -10,6 +10,13 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class TestResultGenerator {
+    /**
+     * It takes a set of students, filters out the students who have failed, and returns a set of strings containing the
+     * name and contact number of the parents of the failed students
+     *
+     * @param studentSet The set of students
+     * @return A HashSet of Strings
+     */
     public HashSet<String> getDetailsOfFailedStudents(Set<Student> studentSet) {
         return studentSet
                 .stream()
@@ -18,6 +25,12 @@ public class TestResultGenerator {
                 .collect(Collectors.toCollection(HashSet::new));
     }
 
+    /**
+     * Sort the students by their name and return the sorted set.
+     *
+     * @param studentSet A set of students
+     * @return A new TreeSet object that contains the elements of the studentSet.
+     */
     public Set<Student> sortStudentsForRanking(Set<Student> studentSet) {
         return new TreeSet<>(studentSet);
     }
