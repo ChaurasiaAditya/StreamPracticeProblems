@@ -8,7 +8,18 @@ package tasks.task3.code;
 
 import java.util.Objects;
 
-public record Employee(short id, String name, double salary, byte numberOfLeaves) {
+public class Employee {
+    private final short id;
+    private final String name;
+    private double salary;
+    private byte numberOfLeaves;
+
+    public Employee(short id, String name, double salary, byte numberOfLeaves) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+        this.numberOfLeaves = numberOfLeaves;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -19,12 +30,41 @@ public record Employee(short id, String name, double salary, byte numberOfLeaves
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(id, name, salary, numberOfLeaves);
+    }
+
+    public short getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public byte getNumberOfLeaves() {
+        return numberOfLeaves;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public void setNumberOfLeaves(byte numberOfLeaves) {
+        this.numberOfLeaves = numberOfLeaves;
+    }
+
+    @Override
     public String toString() {
         return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", salary=" + salary +
-                ", numberOfLeaves=" + numberOfLeaves +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
+                ", salary=" + getSalary() +
+                ", numberOfLeaves=" + getNumberOfLeaves() +
                 '}';
     }
 }
