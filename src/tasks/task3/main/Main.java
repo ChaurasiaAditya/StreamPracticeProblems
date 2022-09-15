@@ -21,5 +21,8 @@ public class Main {
         Employee employee2 = new Employee((short) 102, "Divyansh", 90000.0, (byte) 16);
         Employee employee3 = new Employee((short) 103, "Neeraj", 80000.0, (byte) 27);
         Employee employee4 = new Employee((short) 104, "Vaibhav", 70000.0, (byte) 32);
+
+        // add employees to employee list
+        List<Employee> employees = new ArrayList<>(Arrays.asList(employee1, employee2, employee3, employee4));
     }
 }
