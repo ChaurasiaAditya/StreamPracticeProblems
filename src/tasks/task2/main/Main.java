@@ -24,5 +24,8 @@ public class Main {
 
         // create set of student Object
         Set<Student> students = new HashSet<>(Arrays.asList(student1,student2,student3,student4));
+
+        // create object for Test result Generator
+        TestResultGenerator testResultGenerator = new TestResultGenerator();
     }
 }
