@@ -8,6 +8,7 @@ package tasks.task3.code;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class EmployeeLeaveCalculator {
     public List<Short> getDefaulterEmployeeIDList(List<Employee> employeeList) {
@@ -17,5 +18,12 @@ public class EmployeeLeaveCalculator {
             next.setSalary(next.getSalary() - next.getSalary() * 0.1);
         });
         return shortList;
+    }
+
+    public ArrayList<String> getNumberOfLeaves(List<Employee> employeeList) {
+        return employeeList
+                .stream()
+                .map(next -> "\"" + next.getName() + "-" + next.getNumberOfLeaves() + "\"")
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 }
