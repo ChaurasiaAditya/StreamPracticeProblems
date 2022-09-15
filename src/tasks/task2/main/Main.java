@@ -21,5 +21,8 @@ public class Main {
         Student student2 = new Student((byte) 2,"Vaibhav",1234657890,28);
         Student student3 = new Student((byte) 3,"Neeraj",1234657890,23);
         Student student4 = new Student((byte) 4,"Aditya",1234657890,93);
+
+        // create set of student Object
+        Set<Student> students = new HashSet<>(Arrays.asList(student1,student2,student3,student4));
     }
 }
