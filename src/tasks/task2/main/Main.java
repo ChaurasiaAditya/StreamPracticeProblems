@@ -27,5 +27,9 @@ public class Main {
 
         // create object for Test result Generator
         TestResultGenerator testResultGenerator = new TestResultGenerator();
+
+        // Call the method and print the Set of Failed students
+        System.out.println("Failed Students with their Parents Contact Number");
+        System.out.println(testResultGenerator.getDetailsOfFailedStudents(students));
     }
 }
