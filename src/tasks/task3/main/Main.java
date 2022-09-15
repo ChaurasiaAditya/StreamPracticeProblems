@@ -24,5 +24,8 @@ public class Main {
 
         // add employees to employee list
         List<Employee> employees = new ArrayList<>(Arrays.asList(employee1, employee2, employee3, employee4));
+
+        // create object for employee leave calculator
+        EmployeeLeaveCalculator employeeLeaveCalculator = new EmployeeLeaveCalculator();
     }
 }
