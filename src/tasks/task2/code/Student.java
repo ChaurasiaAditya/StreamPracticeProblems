@@ -8,43 +8,8 @@ package tasks.task2.code;
 
 import java.util.Objects;
 
-public class Student implements Comparable<Student> {
-    private final String studentName;
-    private final long parentsContactNumber;
-    private byte rollNumber;
-    private double marks;
-
-
-    public Student(byte rollNumber, String studentName, long parentsContactNumber, double marks) {
-        this.rollNumber = rollNumber;
-        this.studentName = studentName;
-        this.parentsContactNumber = parentsContactNumber;
-        this.marks = marks;
-    }
-
-    public byte getRollNumber() {
-        return rollNumber;
-    }
-
-    public void setRollNumber(byte rollNumber) {
-        this.rollNumber = rollNumber;
-    }
-
-    public String getStudentName() {
-        return studentName;
-    }
-
-    public long getParentsContactNumber() {
-        return parentsContactNumber;
-    }
-
-    public double getMarks() {
-        return marks;
-    }
-
-    public void setMarks(double marks) {
-        this.marks = marks;
-    }
+public record Student(byte rollNumber, String studentName, long parentsContactNumber,
+                      double marks) implements Comparable<Student> {
 
     @Override
     public boolean equals(Object o) {
@@ -58,21 +23,16 @@ public class Student implements Comparable<Student> {
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(rollNumber, studentName, parentsContactNumber, marks);
-    }
-
-    @Override
     public String toString() {
-        return " RollNumber = " + getRollNumber() +
-                ", StudentName = " + getStudentName() + '\'' +
-                ", ParentsContactNumber = " + getParentsContactNumber() +
-                ", Marks = " + getMarks() +
+        return " RollNumber = " + rollNumber() +
+                ", StudentName = " + studentName() + '\'' +
+                ", ParentsContactNumber = " + parentsContactNumber() +
+                ", Marks = " + marks() +
                 "\n";
     }
 
     @Override
     public int compareTo(Student o) {
-        return Byte.compare((byte) o.getMarks(), (byte) this.getMarks());
+        return Byte.compare((byte) o.marks(), (byte) this.marks());
     }
 }

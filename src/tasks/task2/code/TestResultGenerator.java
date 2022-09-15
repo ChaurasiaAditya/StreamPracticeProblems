@@ -13,12 +13,12 @@ public class TestResultGenerator {
     public HashSet<String> getDetailsOfFailedStudents(Set<Student> studentSet) {
         return studentSet
                 .stream()
-                .filter(students -> students.getMarks() < 30)
-                .map(students -> "\"" + students.getStudentName() + "=" + students.getParentsContactNumber() + "\"")
+                .filter(students -> students.marks() < 30)
+                .map(students -> "\"" + students.studentName() + "=" + students.parentsContactNumber() + "\"")
                 .collect(Collectors.toCollection(HashSet::new));
     }
 
-    public Set<Student> sortStudentsForRanking(HashSet<Student> studentSet) {
+    public Set<Student> sortStudentsForRanking(Set<Student> studentSet) {
         return new TreeSet<>(studentSet);
     }
 }
