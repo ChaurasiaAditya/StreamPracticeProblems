@@ -20,4 +20,28 @@ public class YouTubeVideos {
         this.numberOfLikes = numberOfLikes;
         this.videoInMinutes = videoInMinutes;
     }
+
+    public long getVideoId() {
+        return videoId;
+    }
+
+    public String getNameOfTheVideo() {
+        return nameOfTheVideo;
+    }
+
+    public BigInteger getNumberOfLikes() {
+        return numberOfLikes;
+    }
+
+    public void setNumberOfLikes(BigInteger numberOfLikes) {
+        this.numberOfLikes = numberOfLikes;
+    }
+
+    public int getVideoInMinutes() {
+        return videoInMinutes;
+    }
+
+    public void setVideoInMinutes(int videoInMinutes) {
+        this.videoInMinutes = videoInMinutes;
+    }
 }
