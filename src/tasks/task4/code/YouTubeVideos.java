@@ -58,4 +58,14 @@ public class YouTubeVideos {
     public int hashCode() {
         return Objects.hash(videoId, nameOfTheVideo, numberOfLikes, videoInMinutes);
     }
+
+    @Override
+    public String toString() {
+        return "YouTubeVideos{" +
+                "videoId=" + videoId +
+                ", nameOfTheVideo='" + nameOfTheVideo + '\'' +
+                ", numberOfLikes=" + numberOfLikes +
+                ", videoInMinutes=" + videoInMinutes +
+                '}';
+    }
 }
