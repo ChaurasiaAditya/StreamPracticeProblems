@@ -7,6 +7,7 @@
 package tasks.task4.code;
 
 import java.math.BigInteger;
+import java.util.Objects;
 
 public class YouTubeVideos {
     private final long videoId;
@@ -43,5 +44,18 @@ public class YouTubeVideos {
 
     public void setVideoInMinutes(int videoInMinutes) {
         this.videoInMinutes = videoInMinutes;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        YouTubeVideos that = (YouTubeVideos) o;
+        return videoId == that.videoId && videoInMinutes == that.videoInMinutes && Objects.equals(nameOfTheVideo, that.nameOfTheVideo) && Objects.equals(numberOfLikes, that.numberOfLikes);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(videoId, nameOfTheVideo, numberOfLikes, videoInMinutes);
     }
 }
