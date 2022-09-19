@@ -9,13 +9,13 @@ package tasks.task4.code;
 import java.math.BigInteger;
 import java.util.Objects;
 
-public class YouTubeVideos {
+public class YouTubeVideo {
     private final long videoId;
     private final String nameOfTheVideo;
     private BigInteger numberOfLikes;
     private int videoInMinutes;
 
-    public YouTubeVideos(long videoId, String nameOfTheVideo, BigInteger numberOfLikes, int videoInMinutes) {
+    public YouTubeVideo(long videoId, String nameOfTheVideo, BigInteger numberOfLikes, int videoInMinutes) {
         this.videoId = videoId;
         this.nameOfTheVideo = nameOfTheVideo;
         this.numberOfLikes = numberOfLikes;
@@ -50,7 +50,7 @@ public class YouTubeVideos {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        YouTubeVideos that = (YouTubeVideos) o;
+        YouTubeVideo that = (YouTubeVideo) o;
         return videoId == that.videoId && videoInMinutes == that.videoInMinutes && Objects.equals(nameOfTheVideo, that.nameOfTheVideo) && Objects.equals(numberOfLikes, that.numberOfLikes);
     }
 
