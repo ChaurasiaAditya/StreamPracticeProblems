@@ -9,7 +9,7 @@ package tasks.task4.code;
 import java.math.BigInteger;
 import java.util.Objects;
 
-public class YouTubeVideo {
+public class YouTubeVideo implements Comparable<YouTubeVideo>{
     private final long videoId;
     private final String nameOfTheVideo;
     private BigInteger numberOfLikes;
@@ -67,5 +67,10 @@ public class YouTubeVideo {
                 ", numberOfLikes=" + numberOfLikes +
                 ", videoInMinutes=" + videoInMinutes +
                 '}';
+    }
+
+    @Override
+    public int compareTo(YouTubeVideo o) {
+        return 0;
     }
 }
